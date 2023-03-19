@@ -41,7 +41,7 @@ contract Decentragram {
     // Make sure uploader address exists
     require(msg.sender!=address(0));
 
-    // Increment image id
+    // Increment image id 
     imageCount ++; 
 
     // Add Image to the contract
