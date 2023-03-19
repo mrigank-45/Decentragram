@@ -42,7 +42,7 @@ contract Decentragram {
     require(msg.sender!=address(0));
 
     // Increment image id
-    imageCount ++;
+    imageCount ++; 
 
     // Add Image to the contract
     images[imageCount] = Image(imageCount, _imgHash, _description, 0, msg.sender);
