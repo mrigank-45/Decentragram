@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Identicon from 'identicon.js';
 import photo from '../photo.png'
 
-class Navbar extends Component {
+class test extends Component {
 
   render() {
     return (
@@ -37,4 +37,4 @@ class Navbar extends Component {
   }
 }
 
-export default Navbar;
+export default test;

@@ -1,1 +1,6 @@
 /* Styles go here */
+.loader{
+    position: absolute;
+    margin-top: 22%;
+    margin-left: 47%;
+}
