@@ -11,11 +11,12 @@ import FlexBetween from "../../utils/FlexBetween";
 import WidgetWrapper from "../../utils/WidgetWrapper";
 import { useEffect, useState } from "react";
 
-const UserWidget = ({ userId, picturePath }) => {
+const UserWidget = (props) => {
     const { palette } = useTheme();
     const dark = palette.neutral.dark;
     const medium = palette.neutral.medium;
     const main = palette.neutral.main;
+    const Account = props.account.slice(0,20)+"..."
 
     return (
         <WidgetWrapper>
@@ -25,12 +26,13 @@ const UserWidget = ({ userId, picturePath }) => {
                 pb="1.1rem"
             >
                 <FlexBetween gap="1rem">
-                    <UserImage />
+                    <UserImage account = {props.account}/>
                     <Box>
                         <Typography
                             variant="h4"
                             color={dark}
-                            fontWeight="500"
+                            fontWeight="200"
+                            fontSize="16px"
                             sx={{
                                 "&:hover": {
                                     color: palette.primary.light,
@@ -38,9 +40,9 @@ const UserWidget = ({ userId, picturePath }) => {
                                 },
                             }}
                         >
-                            Mrigank Shukla
+                            {Account}
                         </Typography>
-                        <Typography color={medium}>3 friends</Typography>
+                        <Typography color={medium}>{props.images ? props.images.length : 0} Posts</Typography>
                     </Box>
                 </FlexBetween>
                 <ManageAccountsOutlined />
@@ -88,7 +90,7 @@ const UserWidget = ({ userId, picturePath }) => {
 
                 <FlexBetween gap="1rem" mb="0.5rem">
                     <FlexBetween gap="1rem">
-                        <img src="../assets/twitter.png" alt="twitter" />
+                        <img style={{height:"28px",width:"34px"}} src="https://www.transparentpng.com/thumb/twitter/twitter-bird-logo-pictures-0.png" alt="twitter" />
                         <Box>
                             <Typography color={main} fontWeight="500">
                                 Twitter
@@ -101,7 +103,7 @@ const UserWidget = ({ userId, picturePath }) => {
 
                 <FlexBetween gap="1rem">
                     <FlexBetween gap="1rem">
-                        <img src="../assets/linkedin.png" alt="linkedin" />
+                        <img style={{height:"28px",width:"34px"}} src="https://png.pngtree.com/element_our/png/20180827/linkedin-social-media-icon-png_71812.jpg" alt="linkedin" />
                         <Box>
                             <Typography color={main} fontWeight="500">
                                 Linkedin

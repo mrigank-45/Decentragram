@@ -21,7 +21,7 @@ const AdvertWidget = () => {
                     width="100%"
                     height="auto"
                     alt="advert"
-                    src=""
+                    src="https://media.istockphoto.com/id/1292374288/photo/brand-logo-name-identity-and-customer-concept-chalk-board-background.jpg?b=1&s=170667a&w=0&k=20&c=O6H0Ie-OoKppDacYsbo6V88etVG-3fTYmE5nlcLmC-k="
                     style={{ borderRadius: "0.75rem", margin: "0.75rem 0" }}
                 />
                 <FlexBetween>

@@ -47,7 +47,7 @@ const MyPostWidget = (props) => {
     return (
         <WidgetWrapper>
             <FlexBetween gap="1.5rem">
-                <UserImage link="" />
+                <UserImage account={props.account} />
                 <InputBase
                     placeholder="What's on your mind..."
                     onChange={(e) => setCaption(e.target.value)}

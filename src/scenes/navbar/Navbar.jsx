@@ -34,7 +34,7 @@ const Navbar = (props) => {
     const primaryLight = theme.palette.primary.light;
     const alt = theme.palette.background.alt;
 
-    const fullName = "Mrigank Shukla";
+    const fullName = props.account;
 
     return (
         <FlexBetween padding="1rem 6%" backgroundColor={alt}>
@@ -50,7 +50,7 @@ const Navbar = (props) => {
                         },
                     }}
                 >
-                    Sociopedia
+                    Decentragram
                 </Typography>
                 {isNonMobileScreens && (
                     <FlexBetween
@@ -101,7 +101,7 @@ const Navbar = (props) => {
                             <MenuItem value={fullName}>
                                 <Typography>{fullName}</Typography>
                             </MenuItem>
-                            <MenuItem >Log Out</MenuItem>
+                            {/* <MenuItem >Log Out</MenuItem> */}
                         </Select>
                     </FormControl>
                 </FlexBetween>

@@ -13,16 +13,30 @@ import { useState } from "react";
 
 const PostWidget = (props) => {
     const [isLiked, setIsLiked] = useState(false);
-    const likeCount = 0;
+    const [likeCount, setLikeCount] = useState(0);
 
     const { palette } = useTheme();
     const main = palette.neutral.main;
     const primary = palette.primary.main;
 
+    const Author = props.author.slice(0,20)+"..."
+
+    const clickLike = ()=>{
+        if (isLiked == true) {
+            setIsLiked(false);
+            setLikeCount(0);
+        }
+        else{
+            setIsLiked(true);
+            setLikeCount(1);
+        }
+    }
+
+
     return (
 
         <WidgetWrapper m="2rem 0">
-            <Friend />
+            <Friend link={props.author} name={Author}/>
             <Typography color={main} sx={{ mt: "1rem" }}>
                 {props.description}
             </Typography>
@@ -58,7 +72,7 @@ const PostWidget = (props) => {
                 <FlexBetween gap="1rem">
                     <FlexBetween gap="0.3rem">
                         <IconButton
-                        // onClick={setIsLiked(true)}
+                        onClick={()=>{clickLike()}}
                         >
                             {isLiked ? (
                                 <FavoriteOutlined sx={{ color: primary }} />

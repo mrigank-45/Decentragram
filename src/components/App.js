@@ -11,6 +11,7 @@ import { themeSettings } from "./theme/theme";
 import { useAlert } from 'react-alert';
 import ReactLoading from "react-loading";
 import { useEffect } from "react";
+require("dotenv").config();
 
 //Declare IPFS
 const ipfsClient = require('ipfs-http-client');

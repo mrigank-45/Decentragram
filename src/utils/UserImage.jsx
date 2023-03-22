@@ -1,7 +1,8 @@
 import { Box } from "@mui/material";
 import React, { Component }  from 'react';
+import Identicon from 'identicon.js';
 
-const UserImage = ({ link, size = "60px" }) => {
+const UserImage = ({ account = "64237672hdby2y38gy4gfbgf873fg3", size = "60px" }) => {
     return (
         <Box width={size} height={size}>
             <img
@@ -9,7 +10,7 @@ const UserImage = ({ link, size = "60px" }) => {
                 width={size}
                 height={size}
                 alt="user"
-                src={link}
+                src={`data:image/png;base64,${new Identicon(account, 30).toString()}`}
             />
         </Box>
     );

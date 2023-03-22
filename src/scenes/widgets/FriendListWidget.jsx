@@ -6,7 +6,7 @@ import WidgetWrapper from "../../utils/WidgetWrapper";
 const FriendListWidget = () => {
     const { palette } = useTheme();
 
-    let friends = [{ "name": "Mrigank Shukla", "subtitle": "Teacher", "imgLink": "" }, { "name": "Divjot Singh", "subtitle": "Doctor", "imgLink": "" }]
+    let friends = [{ "name": "Mrigank Shukla", "subtitle": "Teacher", "imgLink": "bhdcb348738fgye" }, { "name": "Divjot Singh", "subtitle": "Doctor", "imgLink": "37848875ghdbc384tr36fgfg38f" }]
 
 
     return (

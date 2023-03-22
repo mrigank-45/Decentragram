@@ -15,7 +15,7 @@ const Friend = ({ name, subtitle, link }) => {
   return (
     <FlexBetween>
       <FlexBetween gap="1rem">
-        <UserImage link={link} size="55px" />
+        <UserImage account={link} size="55px" />
         <Box>
           <Typography
             color={main}

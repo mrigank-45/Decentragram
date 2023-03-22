@@ -21,7 +21,7 @@ const HomePage = (props) => {
                 justifyContent="space-between"
             >
                 <Box flexBasis={isNonMobileScreens ? "26%" : undefined}>
-                    <UserWidget />
+                    <UserWidget account={props.account} images={props.images}/>
                 </Box>
                 <Box
                     flexBasis={isNonMobileScreens ? "42%" : undefined}
@@ -34,6 +34,7 @@ const HomePage = (props) => {
                         decentragram={props.decentragram}
                         buffer={props.buffer}
                         setBuffer={props.setBuffer}
+                        account={props.account}
                     />
                     <PostsWidget images={props.images} tipImageOwner={props.tipImageOwner}/>
                 </Box>
